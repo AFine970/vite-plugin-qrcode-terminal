@@ -1,0 +1,21 @@
+{
+  "name": "vite-plugin-qrcode-terminal",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsup src/main.ts --dts --no-splitting"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "qrcode-terminal": "^0.12.0",
+    "typescript": "^4.8.2",
+    "vite": "^3.0.9"
+  },
+  "devDependencies": {
+    "@types/qrcode-terminal": "^0.12.0",
+    "tsup": "^6.2.3"
+  }
+}
