@@ -1,6 +1,6 @@
 {
   "name": "vite-plugin-qrcode-terminal",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "create QR code in terminal",
   "types": "dist/main.d.ts",
   "main": "dist/main.js",
@@ -8,7 +8,10 @@
     "dist"
   ],
   "scripts": {
-    "build": "rm -rf dist/ && tsup src/main.ts --dts --no-splitting"
+    "build": "rm -rf dist/ && tsup src/main.ts --dts --no-splitting",
+    "release:major": "standard-version -- --release-as major",
+    "release:minor": "standard-version -- --release-as minor",
+    "release:patch": "standard-version -- --release-as patch"
   },
   "keywords": [
     "vite",
@@ -25,10 +28,11 @@
   "devDependencies": {
     "@types/node": "^18.7.14",
     "@types/qrcode-terminal": "^0.12.0",
+    "standard-version": "^9.5.0",
     "tsup": "^6.2.3"
   },
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/AFine970/vite-plugin-qrcode-terminal.git"
   }
 }
