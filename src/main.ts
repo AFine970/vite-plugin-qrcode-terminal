@@ -39,13 +39,15 @@ function createQrcode(
   const { small } = params;
   const content = getInputContent(params, server);
   const urls = renderUrl(content, server);
-  urls.forEach((each) => {
-    qrcode.generate(each, { small: small ?? true }, (qrcode) => {
-      console.log('------');
-      console.log(each);
-      console.log(qrcode);
-      console.log('------');
+  const result = urls.reduce<Record<string, string>>((prev, curr) => {
+    qrcode.generate(curr, { small: small ?? true }, (qrcode) => {
+      prev[curr] = qrcode;
     });
+    return prev;
+  }, {});
+
+  console.table({
+    qrcode: result
   });
 }
 
