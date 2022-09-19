@@ -1,6 +1,6 @@
 {
   "name": "vite-plugin-qrcode-terminal",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "create QR code in terminal",
   "types": "dist/main.d.ts",
   "main": "dist/main.js",
