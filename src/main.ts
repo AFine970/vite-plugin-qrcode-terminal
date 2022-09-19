@@ -68,6 +68,10 @@ function getInputContent(
     if (typeof host === 'string') {
       input = host === '0.0.0.0' ? allHost : [host];
     }
+
+    if (host === undefined) {
+      input = ['localhost']
+    }
   }
   return input;
 }
