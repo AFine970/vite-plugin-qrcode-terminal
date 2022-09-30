@@ -16,18 +16,21 @@ npm install vite-plugin-qrcode-terminal -D
 // vite.config.js
 
 import { defineConfig } from 'vite';
+import vue from '@vitejs/plugin-vue';
 import { vitePluginQrcodeTerminal } from 'vite-plugin-qrcode-terminal';
 
 export default defineConfig({
-  plugins: [
-    ...
-    vitePluginQrcodeTerminal()
-    ...
-  ],
+  plugins: [vue(), vitePluginQrcodeTerminal()],
+  server: {
+    host: '0.0.0.0',
+    open: '/ok/test/ok.html',
+  },
 });
 ```
 
-Setup the server, QR codes out in the terminal. [For example](./public/Snipaste_2022-09-04_23-02-27.png)
+Setup the server, QR codes out in the terminal.
+
+<img src="./public/20220930163439.png">
 
 ## Interface
 

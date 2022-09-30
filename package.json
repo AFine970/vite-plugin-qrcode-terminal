@@ -28,6 +28,7 @@
   "devDependencies": {
     "@types/node": "^18.7.14",
     "@types/qrcode-terminal": "^0.12.0",
+    "chalk": "^5.0.1",
     "standard-version": "^9.5.0",
     "tsup": "^6.2.3"
   },
